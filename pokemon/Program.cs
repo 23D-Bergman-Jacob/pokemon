@@ -122,6 +122,18 @@ while (1 == 1)
     Console.Clear();
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 Console.ReadLine();
 void Bulbasaurp(){
 pokemonv2 = "Bulbasaur";
@@ -242,19 +254,14 @@ basespatk2 = 8;
 basespeed2 = 10;
 if (pokemonlvlv2 <=16){
 pokemonv2 = "metapod";
-baseatk2 = 10  ;
-basedef2 = 34;
-basehp2 = 20;
-basespdef2 = 14;
-basespatk2 = 13;
-basespeed2 = 18;
+basedef2 = 30;
 }
 if (pokemonlvlv2 <=24){
 pokemonv2 = "Blastois";
 baseatk2 = 15  ;
-basedef2 = 40;
+basedef2 = 25;
 basehp2 = 30;
-basespdef2 = 20;
+basespdef2 = 40;
 basespatk2 = 20;
 basespeed2 = 25;
 flying2 = 1;
