@@ -1,15 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Random rnd = new Random();
-float dinhp;
+int motståndare;
+string attack1 = "growhl";
+string attack2 = "tackle";
+string attack3 = "";
+string attack4 = "";
 string frågor;
 string dinpokemon;
-string pokemonv2;
-float basehp;
-float baseatk;
-float basedef;
-float basespatk;
-float basespeed;
-float basespdef;
+string pokemonv2 = "kduhf";
+float basehp = 12;
+float baseatk = 6;
+float basedef = 15;
+float basespatk  = 7;
+float basespeed = 9;
+float basespdef = 4;
 float basehp2;
 float baseatk2;
 float basedef2;
@@ -23,7 +27,7 @@ float hpgrowth;
 float spatkgrowth;
 float spdefgrowth;
 float atk;
-float atkval;
+string atkval;
 float def;
 float speed;
 float hp;
@@ -35,10 +39,10 @@ float speed2;
 float hp2;
 float spatk2;
 int pokemonlvl = 1;
-int pokemonlvlv2;
-int exp = 1;
-int levelexp;
-int pokebollar = 10;
+int pokemonlvlv2 = 1;
+float exp = 1;
+float levelexp = 10;
+// int pokebollar = 10;
 int potion = 5;
 int superpotion = 1;
 int hyperpotion = 0;
@@ -111,6 +115,39 @@ while (1 == 1)
     {
         dinpokemon = "Bulbasaur";
         grass = 1;
+        pokemonv2 = "Bulbasaur";
+grass = 1;
+poison = 1;
+atkgrowth = 1.8F;
+hpgrowth = 6;
+speedgrowth = 2.2F;
+spatkgrowth = 2.4F;
+spdefgrowth = 2.2F;
+defgrowth = 1;
+baseatk2 = 6;
+basedef2 = 30;
+basehp2 = 12;
+basespdef2 = 4;
+basespatk2 = 8;
+basespeed2 = 10;
+if (pokemonlvlv2 <=16){
+pokemonv2 = "Ivysaur";
+baseatk2 = 10  ;
+basedef2 = 34;
+basehp2 = 20;
+basespdef2 = 14;
+basespatk2 = 13;
+basespeed2 = 18;
+}
+if (pokemonlvlv2 <=24){
+pokemonv2 = "Ivysaur";
+baseatk2 = 15  ;
+basedef2 = 40;
+basehp2 = 30;
+basespdef2 = 20;
+basespatk2 = 20;
+basespeed2 = 25;
+}
         break;
     }
     if (frågor == "3")
@@ -121,7 +158,57 @@ while (1 == 1)
     }
     Console.Clear();
 }
+while (true){
+    motståndare = rnd.Next(1,4);
+    if (motståndare == 1){Bulbasaurp();} if (motståndare == 2) {Charmander();} if (motståndare == 3){Squirtle();} 
 
+
+
+
+
+while (true){
+    if (exp >= levelexp){
+        exp = exp-levelexp;
+        levelexp = levelexp*2-levelexp/2;
+        baseatk = baseatk + 2;
+        basehp = basehp + 7;
+        basedef = basedef + 1;
+        basespdef += 2;
+        basespeed += 2;
+        basespatk += 2;
+        pokemonlvl ++;
+    }
+    Console.Clear();
+    System.Console.WriteLine("du har " + basehp + " hp");
+    System.Console.WriteLine("Du möter "+ pokemonv2);
+    System.Console.WriteLine("vilken attack väljer du att göra");
+    while (true){
+    System.Console.WriteLine("1, " +attack1+ "2, "+ attack2+ "3, "+ attack3+ "4, " + attack4);
+    atkval = Console.ReadLine();
+    if (atkval == "1"){
+        if (attack1 !=""){break;}
+        else{
+            System.Console.WriteLine("Välj en annan attack");}}
+        }
+    if (atkval == "2"){
+        if (attack2 !=""){break;}
+                else{
+            System.Console.WriteLine("Välj en annan attack");}}
+    if (atkval == "3"){
+        if (attack3 !=""){break;}
+                else{
+            System.Console.WriteLine("Välj en annan attack");}}
+    if (atkval == "4"){
+        if (attack4 !=""){break;}
+                else{
+            System.Console.WriteLine("Välj en annan attack");}}
+    }
+}}
+
+
+
+
+}
 
 
 
@@ -156,7 +243,7 @@ spatkgrowth = 2.4F;
 spdefgrowth = 2.2F;
 defgrowth = 1;
 baseatk2 = 6;
-basedef2 = 30;
+basedef2 = 15;
 basehp2 = 12;
 basespdef2 = 4;
 basespatk2 = 8;
@@ -226,7 +313,7 @@ basespeed2 = 25;
 flying2 = 1;
 }
 }
-void Squirtle(){
+void Caterpie(){
 pokemonv2 = "Caterpie";
 fire2 = 0;
 bug2 = 1;
@@ -311,5 +398,5 @@ basespdef2 = 20;
 basespatk2 = 20;
 basespeed2 = 25;
 
-}
-}
+}}}}}
+
